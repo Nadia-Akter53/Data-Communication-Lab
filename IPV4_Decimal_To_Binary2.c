@@ -1,21 +1,21 @@
 #include<stdio.h>
-#include<string.h>
-char* ToBin(char ch[]);
+
+char * ToBin(char ip[]);
 int main()
 {
 
-    printf("Enter Decimal Ip : ");
-    char ip[10];
-    char tem[9];
+    char ip[100];
+    printf("Enter : ");
     scanf(" %[^\n]", ip);
 
-    char*token = strtok(ip, ".");
+    char *token = strtok(ip, ".");
 
-    // token e ekhon first value ta ase mane ip : 123.4.5.66
-    // so first value holo 123
-    // but token e eta string hishabe ase, so amdr integer e convert korte hobe
 
-    int first_oc = atoi(token);
+
+
+
+
+     int first_oc = atoi(token);
     if(first_oc >=0 && first_oc<=127)
     {
 
@@ -39,30 +39,27 @@ int main()
 
 }
 
-
-char *ToBin(char ch[])
+char * ToBin(char ip[])
 {
-    int n = atoi(ch);
 
     static char bin[9];
+    int n= atoi(ip);
+
     for(int i=0; i<8; i++)
     {
-        bin[i]='0';
+        bin[i]= '0';
     }
-
     bin[8]='\0';
-    int k=7;
 
-    int rem;
+    int rem ;
+    int k=7;
     for(int i=n; i!=0; i=i/2)
     {
-
         rem = i%2;
         bin[k--]= rem+'0';
-
-
     }
+    return bin;
 
-    return bin ;
+
 
 }
