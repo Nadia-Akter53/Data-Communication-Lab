@@ -96,8 +96,3 @@ Analyze bit/character stuffing in communication frames.
 
 Implement IPv4 data conversion logic.
 
-👩‍💻 Contributors
-
-Developed by: Nadia Akter Eshita
-Department: Computer Science and Engineering (CSE)
-Institution: Green University of Bangladesh
